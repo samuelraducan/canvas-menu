@@ -117,6 +117,4 @@ noscript {
 /*******************
  Focus
  *******************/
-[tabindex="-1"] {
-  outline: none !important;
-}
+
