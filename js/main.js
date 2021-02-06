@@ -32,6 +32,8 @@ const openOffCanvasMenu = _ => {
 };
 
 /** Event Listeners */
+
+// Opens or closes OffcanvasMenu when button is clicked
 button.addEventListener('click', event => {
   isOffCanvasMenuOpen() ? closeOffCanvasMenu() : openOffCanvasMenu();
 });

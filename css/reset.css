@@ -53,7 +53,7 @@ button {
 }
 
 /* I usually expand input and textarea to full-width */
-input[type="text"],
+input[type='text'],
 textarea {
   width: 100%;
 }
@@ -113,8 +113,3 @@ noscript {
   margin-bottom: 1em;
   margin-top: 1em;
 }
-
-/*******************
- Focus
- *******************/
-

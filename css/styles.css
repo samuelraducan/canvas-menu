@@ -24,11 +24,6 @@ h1 {
   line-height: 1.25;
 }
 
-/*
- * BEGIN EDITING FROM THIS POINT ONWARDS
- * =====================================
- */
-
 /**
  * Containers
  */
@@ -39,7 +34,18 @@ h1 {
   left: -14rem;
   width: 14rem;
   background-color: var(--menuBackgroundColor);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, visibility 0.3s;
+  visibility: hidden;
+}
+
+.offsite-is-open .offsite-container {
+  transition-delay: visibility 0.3s;
+  visibility: visible;
+}
+
+.offsite-is-open .site-container,
+.offsite-is-open .offsite-container {
+  transform: translateX(14rem);
 }
 
 .site-container {
@@ -49,25 +55,20 @@ h1 {
   transition: transform 0.3s ease-out;
 }
 
-.offsite-is-open .offsite-container,
-.offsite-is-open .site-container {
-  transform: translateX(14rem);
-}
-
 /**
  * Menu button
  */
 button {
   border: 2px solid var(--menuBackgroundColor);
-  outline: none;
   cursor: pointer;
-  transition: background 0.3s ease-out;
+  outline: none;
+  transition: background-color 0.3s ease-out;
 }
 
 button:hover,
 button:focus,
 .offsite-is-open button {
-  background: var(--textColor);
+  background-color: var(--textColor);
   color: var(--backgroundColor);
   border-color: var(--textColor);
 }
@@ -93,7 +94,7 @@ button:focus,
 }
 
 .nav a:hover {
-  background-color: #010b13;
+  background-color: #010711;
 }
 
 .nav a:hover,
