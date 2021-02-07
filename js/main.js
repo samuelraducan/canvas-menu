@@ -1,7 +1,8 @@
 /** Global Variables */
-const button = document.querySelector('button');
 const body = document.body;
 const menu = document.querySelector('.nav');
+const menuButton = document.querySelector('.menu-button');
+const iconCloseMenu = document.querySelector('.close-button');
 
 // =====================
 /** Functions */
@@ -20,7 +21,8 @@ const isOffCanvasMenuOpen = _ => {
  */
 const closeOffCanvasMenu = _ => {
   body.classList.remove('offsite-is-open');
-  button.focus();
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.focus();
 };
 
 /**
@@ -28,19 +30,25 @@ const closeOffCanvasMenu = _ => {
  */
 const openOffCanvasMenu = _ => {
   body.classList.add('offsite-is-open');
+  // menuButton();
   menu.focus();
 };
 
 /** Event Listeners */
 
 // Opens or closes OffcanvasMenu when button is clicked
-button.addEventListener('click', event => {
+menuButton.addEventListener('click', event => {
   isOffCanvasMenuOpen() ? closeOffCanvasMenu() : openOffCanvasMenu();
 });
 
+iconCloseMenu.addEventListener('click', event => {
+  isOffCanvasMenuOpen() ? closeOffCanvasMenu() : openOffCanvasMenu();
+});
+
+// Closes OffcanvasMenu when escape key pressed
 document.addEventListener('keydown', event => {
   // Close the menu (Escape Key)
   if (isOffCanvasMenuOpen() && event.key === 'Escape') {
-    closeOffCanvasMenu();
+    closeOffCanvasMenu(menuButton);
   }
 });

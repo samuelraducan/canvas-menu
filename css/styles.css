@@ -1,7 +1,6 @@
 :root {
   --textColor: #031129;
-  --backgroundColor: #41b89a;
-  --menuTextColor: #9ebed0;
+  --backgroundColor: #f3f3f3;
   --menuTextHoverColor: #eaf0f3;
   --menuBackgroundColor: #031129;
 }
@@ -74,7 +73,7 @@ button:focus,
 }
 
 [tabindex='-1'] {
-  outline: none !important;
+  outline: none;
 }
 
 /**
@@ -89,7 +88,7 @@ button:focus,
   display: block;
   margin: 0;
   padding: 0.5rem 3rem;
-  color: var(--menuTextColor);
+  color: var(--backgroundColor);
   text-decoration: none;
 }
 
@@ -101,4 +100,20 @@ button:focus,
 .nav a:focus,
 .nav a:active {
   color: var(--menuTextHoverColor);
+}
+
+.nav .close-button {
+  position: absolute;
+  top: 1rem;
+}
+
+.nav .close-button svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  fill: #fff;
+}
+
+.nav .close-button:hover svg,
+.nav .close-button:hover svg {
+  fill: rgb(228, 225, 225);
 }

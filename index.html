@@ -18,7 +18,18 @@
 
   <body>
     <div class="offsite-container">
-      <nav class="nav" tabindex="-1">
+      <p>Use the Escape button to close this navigation.</p>
+      <nav
+        class="nav"
+        tabindex="-1"
+        aria-label="Main navigation"
+        aria-describedby="#hint"
+      >
+        <button class="close-button" aria-label="Close navigation">
+          <svg class="feature__icon">
+            <use xlink:href="images/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Work</a></li>
@@ -30,7 +41,7 @@
 
     <div class="site-container">
       <h1>Click the button to open the sidebar!</h1>
-      <button>
+      <button class="menu-button" aria-expanded="false"
         <span>Sidebar menu &rarr;</span>
       </button>
     </div>
